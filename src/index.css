@@ -1,0 +1,143 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+.profile-update h1 {
+	color: #fff;
+    padding: 8.7px 0;
+    margin: 0;
+    font-size: 22px;
+}
+.frm label {
+	font-size: 16px;
+	color: #4a4a4a;
+}
+.frm label span, .frm fieldset legend span {
+    color: #d0021b;
+    font-size: 18px;
+    font-weight: 700;
+}
+.frm fieldset input {
+    box-shadow: none;
+    height: auto;
+    border: 0;
+    margin: 0;
+}
+.frm fieldset p label {
+	font-size: 18px;
+	font-weight: 
+}
+.success-button.button {
+    background: #908f91;
+    border-radius: 2px;
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 14px 38px;
+    margin: 33px 0 10px;
+}
+.success-button.button:hover {
+    background-color: #14679e;
+    color: #fefefe;
+}
+.text-center {
+	text-align: center;
+}
+.profile-update .frm {
+    margin-top: 0;
+}
+
+/*Encounter*/
+.encounter .save-deaft{
+	background: #efefef;
+	color: #2d81d4;
+}
+.encounter .container-2 h1 {
+    font-weight: 400;
+    color: #1976d2;
+    letter-spacing: 0.5px;
+}
+.date-input {
+    width: 140px;
+    background: #d9f4ff;
+    position: relative;
+}
+.date-input input {
+    height: 48px;
+    color: #1c1f21;
+    border: 0;
+    background: transparent;
+    font-size: 18px;
+    padding-left: 14px;box-shadow: none;
+}
+.date-icon {
+    display: inline-block;
+    color: #1c1f21;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+.zmdi-calendar-alt {
+	font-size: 22px;
+}
+
+
+.Outreach-list {
+    list-style: none;
+    padding: 0;
+    border: 2px solid #1976d2;
+    float: left;
+    margin: 0;
+}
+.Outreach-list li {
+    width: 25%;
+    float: left;
+    padding: 10px 5px;
+    font-size: 12px;
+    border-right: 2px solid #1976d2;
+    min-height: 63px;
+}
+.Outreach-list li:last-child {
+    border-right: 0;
+    background: #1976d2;
+    color: #fff;
+    padding: 19px 0;
+    text-align: center;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+
+.search { position: relative ; }
+.search span { 
+    position: absolute;
+    top: 5px;
+    right: 15px;
+    font-size: 20px;
+    color: #fff;
+    background-color: #3076d3;
+    border-radius: 50%;
+    padding: 0px 7px;
+}
+.search-box h2 {
+    color:#646363;
+    font-weight: 600;
+    padding: 10px;
+}
+.search-box img {
+    max-width: 50px;
+}
+.recent-head {
+    margin-top: 30px;
+}
+.recent-box .recent{
+  border-top: 1px solid rgba(1,1,1,0.2);
+  background-color: #fff;
+  padding: 5px 10px;
+}
+.recent-box .recent .text-right {
+    color:#6c757d;
+}
