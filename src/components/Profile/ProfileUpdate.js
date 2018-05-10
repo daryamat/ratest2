@@ -27,32 +27,32 @@ class ProfileUpdate extends Component {
 				        </label>
 				        <fieldset className="large-6 cell">
 						    <legend>Team<span>*</span></legend>
-						    <p><input className="rd-input" type="radio" name="pokemon" value="Red" id="pokemonRed" required /><label htmlfor="pokemonRed">Street Medicine</label></p>
-						    <p><input className="rd-input" type="radio" name="pokemon" value="Blue" id="pokemonBlue" /><label htmlfor="pokemonBlue">Shelter Health</label></p>
+						    <p><input className="rd-input" type="radio" name="pokemon" value="Red" id="pokemonRed" required /><label htmlFor="pokemonRed">Street Medicine</label></p>
+						    <p><input className="rd-input" type="radio" name="pokemon" value="Blue" id="pokemonBlue" /><label htmlFor="pokemonBlue">Shelter Health</label></p>
 						</fieldset>
-						<fieldset class="large-6 cell">
+						<fieldset className="large-6 cell">
 						    <legend>Roli<span>*</span></legend>
-						    <p><input className="rd-input" type="radio" name="pokemon" value="Red" id="pokemonRed" required /><label htmlfor="pokemonRed">RN</label></p>
+						    <p><input className="rd-input" type="radio" name="pokemon" value="Red" id="pokemonRed" required /><label htmlFor="pokemonRed">RN</label></p>
 						    <p><input className="rd-input" type="radio" name="pokemon" value="Blue" id="pokemonBlue" />
-						    <label htmlfor="pokemonBlue">MD/NP</label></p>
+						    <label htmlFor="pokemonBlue">MD/NP</label></p>
 						    <p><input className="rd-input" type="radio" name="pokemon" value="Red" id="pokemonRed"  />
-						    <label htmlfor="pokemonRed">HW</label></p>
+						    <label htmlFor="pokemonRed">HW</label></p>
 						    <p><input className="rd-input" type="radio" name="pokemon" value="Blue" id="pokemonBlue" />
-						    <label htmlfor="pokemonBlue">BH Spec</label></p>
+						    <label htmlFor="pokemonBlue">BH Spec</label></p>
 						    <p><input className="rd-input" type="radio" name="pokemon" value="Red" id="pokemonRed"  />
-						     <label htmlfor="pokemonRed">PSS</label></p>
+						     <label htmlFor="pokemonRed">PSS</label></p>
 						    <p><input className="rd-input" type="radio" name="pokemon" value="Blue" id="pokemonBlue" />
-						    <label htmlfor="pokemonBlue">Other</label></p>
+						    <label htmlFor="pokemonBlue">Other</label></p>
 						</fieldset>
 						<fieldset >
 						    <legend>Check these out<span>*</span></legend>
-						    <p><input id="checkbox1" type="checkbox" /><label htmlfor="checkbox1">6th St HR Center</label></p>
-						    <p><input id="checkbox2" type="checkbox" /><label htmlfor="checkbox2">A Woman's Place Drop-in
+						    <p><input id="checkbox1" type="checkbox" /><label htmlFor="checkbox1">6th St HR Center</label></p>
+						    <p><input id="checkbox2" type="checkbox" /><label htmlFor="checkbox2">A Woman's Place Drop-in
 							</label></p>
-						    <p><input id="checkbox3" type="checkbox" /><label htmlfor="checkbox3">Episcopal or Sanctuary
+						    <p><input id="checkbox3" type="checkbox" /><label htmlFor="checkbox3">Episcopal or Sanctuary
 						    </label></p>
-						    <p><input id="checkbox3" type="checkbox" /><label htmlfor="checkbox3">HOSPITAL OR SNF</label></p>
-						    <p><input id="checkbox3" type="checkbox" /><label htmlfor="checkbox3">Episcopal or Sanctuary</label></p>
+						    <p><input id="checkbox3" type="checkbox" /><label htmlFor="checkbox3">HOSPITAL OR SNF</label></p>
+						    <p><input id="checkbox3" type="checkbox" /><label htmlFor="checkbox3">Episcopal or Sanctuary</label></p>
 						</fieldset>
 						<p className="text-center">
 							<button type="button" className="button success-button">Save Changes</button>

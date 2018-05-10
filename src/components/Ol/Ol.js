@@ -10,48 +10,68 @@ class Ol extends Component {
         this.data=[
             {
                 'icon':'zmdi-accounts',
+                'id': 0,
                 'title':'Alvarez, Angela L',
                 'last_seen':' 4/17/2018',
-                'action':'',
+                'action':'profile-details',
                 'image':0,
                 'day':'Today',
-                'assigned':0
+                'assigned':0,
+                'dob': '03/28-1984',
+                'sex': 'Female',
+                'phone': '444-555-3333'
             },
             {
                 'icon':profile,
+                'id': 1,
                 'title':'Gonzalez, Mirabel S',
                 'last_seen':' 4/10/2018',                
                 'action':'profile-details',
                 'image':1,
                 'day':'Today',
-                'assigned':1                
+                'assigned':1,
+                'dob': '04/28-1984',
+                'sex': 'Female',
+                'phone': '444-555-4444'                
             },
             {
                 'icon':'zmdi-accounts',
+                'id': 2,
                 'title':' Nardi, Carmen A',
                 'last_seen':' 1/12/2018',                
-                'action':'',
+                'action':'profile-details',
                 'image':0,
                 'day':'Today',
-                'assigned':0                                             
+                'assigned':0,
+                'dob': '05/28-1984',
+                'sex': 'Male',
+                'phone': '444-555-5555'                                             
             },
             {
                 'icon':'zmdi-accounts',
+                'id': 3,
                 'title':' Putnam, Ray S',
                 'last_seen':' 6/22/2018',                
-                'action':'',
+                'action':'profile-details',
                 'image':0,
                 'day':'Today',
-                'assigned':0                                                            
+                'assigned':0,
+                'dob': '06/28-1984',
+                'sex': 'Male',
+                'phone': '444-555-6666'                                                            
             },
             {
                 'icon':'zmdi-accounts',
+                'id': 4,
                 'title':' White, Candance B',
                 'last_seen':' 4/17/2018',                
-                'action':'',
+                'action':'profile-details',
                 'image':0,
                 'day':'2d',
-                'assigned':0
+                'assigned':0,
+                'dob': '07/28-1984',
+                'sex': 'Female',
+                'phone': '444-555-7777'
                 
             }
         ]
@@ -87,7 +107,7 @@ class Ol extends Component {
                                     if(this.state.assigned_check){
                                         if(data.assigned === 1){
                                             return (
-                                                <NavLink className="lists-items nonfilter" to={`/${data.action}`} key={i} onClick={this.handleClick.bind(this, data)}>
+                                                <NavLink className="lists-items nonfilter" to={`/${data.action}/${data.id}`} key={i} onClick={this.handleClick.bind(this, data)}>
                                                 <span className="li1">
                                                     <span>
                                                         {data.image === 0 ?
@@ -106,7 +126,7 @@ class Ol extends Component {
                                         }
                                     }else{
                                         return(
-                                            <NavLink className="lists-items nonfilter" to={`/${data.action}`} key={i} onClick={this.handleClick.bind(this, data)}>
+                                            <NavLink className="lists-items nonfilter" to={`/${data.action}/${data.id}`} key={i} onClick={this.handleClick.bind(this, data)}>
                                             <span className="li1">
                                                 <span>
                                                     {data.image === 0 ?

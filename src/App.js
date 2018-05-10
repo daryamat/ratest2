@@ -55,9 +55,9 @@ class App extends Component {
                 <Redirect to="/login"/>
               )
             )} />
-            <Route path="/profile-details"  render={()=>(
+            <Route path="/profile-details/:id"  render={(props)=>(
               token ? (
-                <ProfileDetails redirect = {this.redirect.bind(this)}/>
+                <ProfileDetails redirect = {this.redirect.bind(this)} {...props}/>
               ) : (
                 <Redirect to="/login" />
               )

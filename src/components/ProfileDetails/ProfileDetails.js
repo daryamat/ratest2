@@ -8,18 +8,102 @@ import { NavLink } from 'react-router-dom';
 
 class ProfileDetails extends Component {
     constructor(props){
-        super(props);
-        this.state={
-            alert:true,
-            summary:false
-        }
+      super(props);
+      this.state={
+        section:'alerts',
+        data: [
+          {
+            'icon':'zmdi-accounts',
+            'id': 0,
+            'title':'Alvarez, Angela L',
+            'last_seen':' 4/17/2018',
+            'action':'profile-details',
+            'image':0,
+            'day':'Today',
+            'assigned':0,
+            'dob': '03/28-1984',
+            'sex': 'Female',
+            'phone': '444-555-3333'
+          },
+          {
+            'icon':profile,
+            'id': 1,
+            'title':'Gonzalez, Mirabel S',
+            'last_seen':' 4/10/2018',                
+            'action':'profile-details',
+            'image':1,
+            'day':'Today',
+            'assigned':1,
+            'dob': '04/28-1984',
+            'sex': 'Female',
+            'phone': '444-555-4444'                
+          },
+          {
+            'icon':'zmdi-accounts',
+            'id': 2,
+            'title':' Nardi, Carmen A',
+            'last_seen':' 1/12/2018',                
+            'action':'profile-details',
+            'image':0,
+            'day':'Today',
+            'assigned':0,
+            'dob': '05/28-1984',
+            'sex': 'Male',
+            'phone': '444-555-5555'                                             
+          },
+          {
+            'icon':'zmdi-accounts',
+            'id': 3,
+            'title':' Putnam, Ray S',
+            'last_seen':' 6/22/2018',                
+            'action':'profile-details',
+            'image':0,
+            'day':'Today',
+            'assigned':0,
+            'dob': '06/28-1984',
+            'sex': 'Male',
+            'phone': '444-555-6666'                                                            
+          },
+          {
+            'icon':'zmdi-accounts',
+            'id': 4,
+            'title':' White, Candance B',
+            'last_seen':' 4/17/2018',                
+            'action':'profile-details',
+            'image':0,
+            'day':'2d',
+            'assigned':0,
+            'dob': '07/28-1984',
+            'sex': 'Female',
+            'phone': '444-555-7777'
+            
+          }
+        ],
+        profileData: ''
+      }
+      this.handleClick=this.handleClick.bind(this);
     }
 
     componentWillMount(){
-        // document.getElementById("header").style.display = "none";
+      var id = this.props.match.params.id;
+      var profileData = this.state.data.map((user) => {
+          console.log("props", JSON.stringify(user.id), "id", id);
+          if(id === JSON.stringify(user.id)){
+            this.setState({
+              profileData: user
+            })
+          }
+        
+      })
+    }
+
+    handleClick(section){
+      this.setState({section:section})
     }
 
     render() {
+      console.log(this.props)
+      var info = this.state.profileData;
         return (
             <div className="blue">
                 <div className="container">
@@ -27,7 +111,7 @@ class ProfileDetails extends Component {
                         <div className="top-bar tbbs blue " id="responsive-menu">
                         <div className="top-bar-left ">
                             <ul className="dropdown menu blue" data-dropdown-menu>
-                            <li className="menu-text white">Gonzalez, Mirabel S</li>
+                            <li className="menu-text white">{info.title}</li>
                             </ul>
                         </div>
                         <div className="top-bar-right white">
@@ -37,23 +121,26 @@ class ProfileDetails extends Component {
                     </div>
                 </div>
 
-                <div className="container mt55">
+                <div className="container">
                     <div className="row">
                     <div className="columns small-12">
                         <div className="container-4 ">
                         <div className="pr-box">
                             <div className="pr-box-left">
-                            <img src={profile} alt="profile" />
+                            {info.image === 0 
+                              ? <i className="zmdi zmdi-account"></i> 
+                              : <img src={profile} alt="profile" />
+                            }
                             </div>
                             <div className="pr-box-right">
                             <p>Date of Birth
-                                <strong>08/28-1984</strong>
+                                <strong>{info.dob}</strong>
                             </p>
                             <p>Sex at Birth
-                                <strong>08/28-1984</strong>
+                                <strong>{info.sex}</strong>
                             </p>
                             <p>Phone
-                                <strong>444-555-5555 <i className="zmdi zmdi-phone"></i></strong>
+                                <strong>{info.phone} <i className="zmdi zmdi-phone"></i></strong>
                             </p>
                             </div>
                         </div>
@@ -63,23 +150,30 @@ class ProfileDetails extends Component {
                         </div>
                         <div className="container-5">
                         <ul className="tabs" data-tabs id="example-tabs">
-                          <li className="tabs-title is-active"><a href="#panel1" aria-selected="true">Alerts</a></li>
-                          <li className="tabs-title"><a data-tabs-target="panel2" href="#panel2">Summary</a></li>
-                          <li className="tabs-title"><a data-tabs-target="panel3" href="#panel3">Location</a></li>
-                          <li className="tabs-title"><a data-tabs-target="panel4" href="#panel4">History</a></li>
+                          <li className={`tabs-title ${this.state.section==='alerts' ? 'is-active' : ''}` } onClick={this.handleClick.bind(this,'alerts')}><a>Alerts</a></li>
+                          <li className={`tabs-title ${this.state.section==='summary' ? 'is-active' : ''}` } onClick={this.handleClick.bind(this,'summary')}><a data-tabs-target="panel2" href="#panel2">Summary</a></li>
+                          <li className={`tabs-title ${this.state.section==='location' ? 'is-active' : ''}` } onClick={this.handleClick.bind(this,'location')}><a data-tabs-target="panel3" href="#panel3">Location</a></li>
+                          <li className={`tabs-title ${this.state.section==='history' ? 'is-active' : ''}` } onClick={this.handleClick.bind(this,'history')}><a data-tabs-target="panel4" href="#panel4">History</a></li>
                         </ul>
                         <div className="tabs-content" data-tabs-content="example-tabs">
                       <div className="tabs-panel is-active" id="panel1">
-                         <Alerts />
-                      </div>
-                      <div className="tabs-panel" id="panel2">
-                     <Summary />
+                        {this.state.section==='alerts' &&
+                          <Alerts />
+                        }
+                        {this.state.section==='summary' &&
+                          <Summary />
+                        }
+                        {this.state.section==='location' &&
+                          <Location />
+
+                        }
+                          {this.state.section==='history' &&
+                            <History />
+                          }
                       </div>
                       <div className="tabs-panel" id="panel3">
-                    <Location />
                       </div>
                       <div className="tabs-panel" id="panel4">
-                    <History />
                       </div>
                     </div>
     

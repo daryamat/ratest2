@@ -343,3 +343,67 @@ span.dot{
     margin: 0;
     font-size: 22px;
 }
+/*CSS for Search*/
+.search{
+	margin: 15px 20px 80px 15px;
+}
+.search input{
+	padding: 25px;
+    box-shadow: 0px 1px 1px 1px #ccc5c5;
+    border: none;
+}
+.search span{
+	top: 9px !important;
+	font-size: 23px !important;
+}
+.no-margin{
+	margin: 0 !important;
+}
+.App{
+	background-color: #f1f1f1;
+}
+.recentSearches .li1 span{
+	border-radius: 0 !important;
+}
+.searchResult {
+    position: relative;
+}
+
+.searchResult ul {
+    list-style:  none;
+    max-height: 130px;
+    overflow:  scroll;
+    position:  absolute;
+    top: -489px;
+    display:  inline-block;
+    background:  #fff;
+    width: 91%;
+    margin:  0 1px 0px 14px;
+}
+
+.searchResult ul li {
+    padding: 7px 0 0 27px;
+}
+/*CSS for Search ends*/
+/*location CSS*/
+.locationslist{
+    padding: 8px;
+}
+.no_border{border-bottom: none !important;}
+.locationslist .li1 span{border: none !important; border-radius: 0 !important;}
+.locationslist .li1 {padding: 10px 0 !important}
+.locationslist .li12 {font-size: 14px !important;}
+.location {padding: -5px !important;}
+.location .sne{padding: 15px 0 !important;font-size: 12px;}
+.margin_bot{margin-bottom: 5px;}
+.width_fifty{width: 50%;max-width: 50%;display: inline-block;text-align: center;}
+.encounter_btn h1{font-size: 14px;}
+.encounter_btn h1.blue_btn{font-size: 14px; color:#1976d2; }
+.encounter_btn {padding:15px 10px;}
+.table_row{display: table-row !important;}
+/*location CSS ends*/
+/*CSS For Details*/
+.pr-box-left i{
+	font-size: 130px;
+	padding: 0 0 0 15px; 
+}
